@@ -69,10 +69,13 @@ const App = () => {
 						<h2 className="text-center text-warning">{isCross ? "CROSS'S" : "CIRCLE'S"} TURN</h2>
 					)}
 					{winMsg ? null : itemArray.includes('empty') ? null : (
-						<div className="mb-2 mt-2">
-							<Button color="success" block onClick={reloadGame}>
-								Reload the game
-							</Button>
+						<div>
+							{setWinMsg('GAME DRAWN')}
+							<div className="mb-2 mt-2">
+								<Button color="success" block onClick={reloadGame}>
+									Reload the game
+								</Button>
+							</div>
 						</div>
 					)}
 					<div className="grid">
